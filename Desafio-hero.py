@@ -1,4 +1,5 @@
 import time 
+import sys
 
 '''     Crie uma variável para armazenar o nome e a quantidade de experiência (XP) de um herói, 
     depois utilize uma estrutura de decisão para apresentar alguma das mensagens abaixo:
@@ -49,7 +50,15 @@ elif xp >= 9001 and xp <= 10000:
 elif xp >= 10001:
     nivel = nivel[7]    #radiante
 
-print("VERIFICANDO ...")
-time.sleep(1)
+# A função 'sys.stdout.write()' é usada para escrever uma string na saída padrão.
+sys.stdout.write("VERIFICANDO")
 
-print(f"O Herói de nome {nome_heroi} está no nível de {nivel}")
+# A função 'sys.stdout.flush()' é usada para limpar o buffer de saída. 
+sys.stdout.flush()
+
+for _ in range(3):  # Número em 'range()'-->  quantos pontos serão impressos.
+    sys.stdout.write('.')
+    sys.stdout.flush()
+    time.sleep(1)
+
+print(f"\nO Herói de nome {nome_heroi} está no nível de {nivel}")
