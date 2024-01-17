@@ -15,40 +15,40 @@ Se XP for menor do que 1.000 = Ferro
             ## Saída
 
 Ao final deve se exibir uma mensagem:
-        "O Herói de nome *{nome}* está no nível de *{nivel}* ''' 
+        "O Herói de nome *{nome}* está no nível de *{level}* ''' 
 
 #InputDO  do nome (heroi)
-nome_heroi =  input("INFORME O NOME DO HÉROI ! ")
+nameHero =  input("INFORME O NOME DO HÉROI ! ")
 
 #Definição de xp (heroi)
 xp = int(input("DETERMINE A QUANTIDADE DE EXPERIÊNCIA DO SEU HÉROI ! "))
 
-nivel = ["Ferro", "Bronze", "Prata", "Ouro", "Platina", "Ascendente", "Imortal", "Radiante"]
+level = ["Ferro", "Bronze", "Prata", "Ouro", "Platina", "Ascendente", "Imortal", "Radiante"]
 
 
 if xp <= 1000:
-    nivel = nivel[0]    #ferro
+    level = level[0]    #ferro
 
 elif xp >= 1001 and xp <= 2000:
-    nivel = nivel[1]    #bronze 
+    level = level[1]    #bronze 
 
 elif xp >= 2001 and xp <= 5000:
-    nivel = nivel[2]    #prata
+    level = level[2]    #prata
 
 elif xp >= 5001 and xp <= 7000:
-    nivel = nivel[3]    #ouro
+    level = level[3]    #ouro
 
 elif xp >= 7001 and xp <= 8000:
-    nivel = nivel[4]    #platina
+    level = level[4]    #platina
 
 elif xp >= 8001 and xp <= 9000:
-    nivel = nivel[5]    #ascendente
+    level = level[5]    #ascendente
 
 elif xp >= 9001 and xp <= 10000:
-    nivel = nivel[6]    #imortal
+    level = level[6]    #imortal
 
 elif xp >= 10001:
-    nivel = nivel[7]    #radiante
+    level = level[7]    #radiante
 
 # A função 'sys.stdout.write()' é usada para escrever uma string na saída padrão.
 sys.stdout.write("VERIFICANDO")
@@ -61,4 +61,4 @@ for _ in range(3):  # Número em 'range()'-->  quantos pontos serão impressos.
     sys.stdout.flush()
     time.sleep(1)
 
-print(f"\nO Herói de nome {nome_heroi} está no nível de {nivel}")
+print(f"\nO Herói de nome {nameHero} está no nível de {level}")
